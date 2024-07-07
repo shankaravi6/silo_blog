@@ -24,7 +24,7 @@ const MasonryLayout = () => {
         {articleData.map((data, index) => {
             return <SoFlex key={index} dir='column'>
               <SoBox className="relative">
-                <SoImg width="100%" src={`../../../public/assets/${data.img}`} />
+                <SoImg width="100%" src={`/assets/${data.img}`} />
                 <SoSubTitle tt='uppercase' className='absolute bottom-0 right-0' style={{background:"linear-gradient(360deg, black, transparent)"}} color={palette.text.title}>{data.title}</SoSubTitle>
               </SoBox>
               <SoBox w='100%'>
