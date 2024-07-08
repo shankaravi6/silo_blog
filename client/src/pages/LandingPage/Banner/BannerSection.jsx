@@ -4,7 +4,7 @@ import {
   SoCover,
   SoFlex,
   SoSection,
-} from "../../components/styledcomponents/globalStyles";
+} from "../../../components/styledcomponents/globalStyles";
 import BannerImage from "./BannerImage";
 import BannerContent from "./BannerContent";
 import InfoSection from "../Info/InfoSection";

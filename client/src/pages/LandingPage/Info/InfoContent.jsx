@@ -6,11 +6,11 @@ import {
   SoSubTitle,
   SoTitle,
   SoTypography,
-} from "../../components/styledcomponents/globalStyles";
-import { useThemeContext } from "../../context/theme/ThemeContext";
-import NavButtons from "../../components/layout/Navigation/NavButtons";
+} from "../../../components/styledcomponents/globalStyles";
+import { useThemeContext } from "../../../context/theme/ThemeContext";
+import NavButtons from "../../../components/layout/Navigation/NavButtons";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import SoPlainButton from "../../components/common/SoPlainButton";
+import SoPlainButton from "../../../components/common/SoPlainButton";
 
 
 const InfoContent = () => {

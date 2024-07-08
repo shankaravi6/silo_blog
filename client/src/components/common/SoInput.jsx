@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
-import { useThemeContext } from "../../context/themeprovider/ThemeProvider";
+import { useThemeContext } from "../../context/theme/ThemeContext";
 
 const mapStateToProps = (state) => ({
-    mode: state.silo.mode,
+    mode: state.shopping.mode,
   });
   
   const SiloComponent = (StyledComponent) => {
@@ -22,16 +22,16 @@ const StyledInput = SiloComponent(styled.input`
   position: relative;
   padding: 7.5px 20px;
   width: ${(props) => (props.width ? props.width : "100%")};
-  border-radius: 5px;
-  background-color: ${(props) => props.palette.background.high};
-  color: ${(props) => props.palette.text.main};
+  border-radius: 0px;
+  background-color: ${(props) => props.bg ? props.bg : props.palette.background.high};
+  color: ${(props) => props.color ? props.color : props.palette.text.main};
   border: 2.5px solid ${(props) => (props.err ? props.palette.error.main : props.palette.text.mid)};
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   transition: all 0.3s ease;
   width: 100%;
 
   &::placeholder {
-  color: ${(props) => props.palette.placeholder.main};
+  color: ${(props) => props.placecolor ? props.placecolor : props.palette.placeholder.main};
   }
 
   &:hover {
@@ -55,7 +55,7 @@ const HelperText = styled.span`
   color: ${(props) => (props.err ? "#FF5733" : "#FF5733")};
 `;
 
-const SoInput = ({ placeholder, width, onChange, name, value, err, helperText, type, style }) => {
+const SoInput = ({ placeholder, width, onChange, name, value, err, helperText, type, style, bg, color, placecolor }) => {
   return (
     <span style={{width:"100%"}}>
       <StyledInput
@@ -67,6 +67,9 @@ const SoInput = ({ placeholder, width, onChange, name, value, err, helperText, t
         err={err}
         type={type}
         style={style}
+        bg={bg}
+        color={color}
+        placecolor={placecolor}
       />
       {err && helperText && <HelperText err={err}>{helperText}</HelperText>}
     </span>

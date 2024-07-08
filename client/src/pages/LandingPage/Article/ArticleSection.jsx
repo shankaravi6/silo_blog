@@ -6,9 +6,10 @@ import {
   SoFlex,
   SoSection,
   SoSubTitle,
-} from "../../components/styledcomponents/globalStyles";
+} from "../../../components/styledcomponents/globalStyles";
 import MasonryLayout from "./MasonryLayout";
-import SoButton from "../../components/common/SoButton";
+import SoButton from "../../../components/common/SoButton";
+
 
 const ArticleSection = () => {
   return (

@@ -3,8 +3,8 @@ import {
   SoBackImg,
   SoBox,
   SoImg,
-} from "../../components/styledcomponents/globalStyles";
-import Article from "../../../public/assets/images/info/article_new.jpg";
+} from "../../../components/styledcomponents/globalStyles";
+import Article from "/assets/images/info/article_new.jpg";
 
 const InfoImage = () => {
   return (

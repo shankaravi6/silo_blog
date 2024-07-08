@@ -5,8 +5,8 @@ import {
   SoHeadLineText,
   SoTitle,
   SoTypography,
-} from "../../components/styledcomponents/globalStyles";
-import SoButton from "../../components/common/SoButton";
+} from "../../../components/styledcomponents/globalStyles";
+import SoButton from "../../../components/common/SoButton";
 
 const BannerContent = () => {
   return (

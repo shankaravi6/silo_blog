@@ -8,9 +8,9 @@ import {
   SoSubTitle,
   SoTitle,
   SoTypography,
-} from "../../components/styledcomponents/globalStyles";
-import { useThemeContext } from "../../context/theme/ThemeContext";
-import { articleData } from "../../datas/ArticleData";
+} from "../../../components/styledcomponents/globalStyles";
+import { useThemeContext } from "../../../context/theme/ThemeContext";
+import { articleData } from "../../../datas/ArticleData";
 
 const MasonryLayout = () => {
   const { palette } = useThemeContext();

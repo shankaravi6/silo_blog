@@ -4,9 +4,9 @@ import {
   SoFlex,
   SoImg,
   SoTypography,
-} from "../../components/styledcomponents/globalStyles";
-import { useThemeContext } from "../../context/theme/ThemeContext";
-import Hinston from "../../../public/assets/images/banner/hinston.jpg";
+} from "../../../components/styledcomponents/globalStyles";
+import { useThemeContext } from "../../../context/theme/ThemeContext";
+import Hinston from "/assets/images/banner/hinston.jpg";
 
 const BannerImage = () => {
   const { palette } = useThemeContext();

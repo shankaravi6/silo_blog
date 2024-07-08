@@ -1,5 +1,5 @@
 import React from 'react'
-import { SoCover, SoFlex, SoSection } from '../../components/styledcomponents/globalStyles'
+import { SoCover, SoFlex, SoSection } from '../../../components/styledcomponents/globalStyles'
 import InfoImage from './InfoImage'
 import InfoContent from './InfoContent'
 
