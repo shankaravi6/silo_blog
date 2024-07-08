@@ -8,6 +8,8 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMode } from '../../../store';
 import { colorTokens } from '../../../context/theme/theme';
+import { Link } from "react-router-dom";
+
 
 const NavButtons = () => {
 
@@ -16,7 +18,7 @@ const NavButtons = () => {
 
   return (
     <SoFlex gap='20px'>
-        <SoPlainButton>LOGIN</SoPlainButton>
+        <SoPlainButton><Link to='/admin'>LOGIN</Link></SoPlainButton>
         {mode == 'light' ? <SoCover className='cursor-pointer' onClick={() => {dispatch(setMode("dark"))}}><DarkModeIcon/></SoCover> : <SoCover className='cursor-pointer' onClick={() => {dispatch(setMode("light"))}}><LightModeIcon style={{color:`${colorTokens.drops[200]}`}} /></SoCover>}
     </SoFlex>
   );
