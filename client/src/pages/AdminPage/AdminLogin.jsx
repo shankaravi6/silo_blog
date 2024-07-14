@@ -38,14 +38,14 @@ const AdminLogin = () => {
   return (
     <SoCenterContainer bg="#000000db">
       <SoFlex bs={shadow} bg={colorTokens.drops[1000]}>
-        <SoBox className="relative" w="500px" h="500px">
+        <SoBox className="relative" w="550px" h="550px">
           <SoImg style={{transform:'rotateY(180deg)'}} width="100%" src={CoverImg} />
           <SoFlex al='center' className='absolute top-2 left-2' bg='transparent' gap='10px'>
             <ControlCameraOutlinedIcon style={{color:`${colorTokens.drops[400]}`, fontSize:"2.5rem"}} />
             <SoSubTitle fs='22px' ls='1.5px' color={colorTokens.drops[400]}>BLACK CMS</SoSubTitle>
           </SoFlex>
         </SoBox>
-        <SoBox w="500px" h="500px">
+        <SoBox w="550px" h="550px">
           <SoFlex bg="transparent" w="100%" dir="column" gap="1rem">
             <SoFlex bg="transparent" w="100%" dir='column'>
             <AdminPanelSettingsIcon style={{color:`${colorTokens.drops[500]}`, fontSize:"4.75rem"}} />
