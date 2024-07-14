@@ -8,8 +8,8 @@ export const modeSlice = createSlice({
   name: "shopping",
   initialState,
   reducers: {
-    setMode: (state) => {
-      state.mode = state.mode === "light" ? "dark" : "light";
+    setMode: (state,action) => {
+      state.mode = action.payload;
     },
   },
 });

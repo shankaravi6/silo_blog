@@ -6,6 +6,7 @@ import "./App.css"
 import AppRoutes from "./routes/AppRoutes";
 
 
+
 const App = () => {
   const mode = useSelector((state) => state.shopping.mode);
   const theme = useMemo(() => themeSettings(mode), [mode]);

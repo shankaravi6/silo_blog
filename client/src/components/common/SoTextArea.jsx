@@ -18,17 +18,17 @@ const mapStateToProps = (state) => ({
     return ConnectedStyledComponent;
   };
 
-const StyledInput = SiloComponent(styled.input`
+const StyledInput = SiloComponent(styled.textarea`
   position: relative;
   padding: 7.5px 20px;
   width: ${(props) => (props.width ? props.width : "100%")};
+  height:${(props) => (props.height ? props.height : "auto")} ;
   border-radius: 0px;
   background-color: ${(props) => props.bg ? props.bg : props.palette.background.high};
   color: ${(props) => props.color ? props.color : props.palette.text.main};
   border: 1.5px solid ${(props) => (props.err ? props.palette.error.main : props.palette.text.mid)};
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   transition: all 0.3s ease;
-  width: 100%;
 
   &::placeholder {
   color: ${(props) => props.placecolor ? props.placecolor : props.palette.placeholder.main};
@@ -55,12 +55,13 @@ const HelperText = styled.span`
   color: ${(props) => (props.err ? "#FF5733" : "#FF5733")};
 `;
 
-const SoInput = ({ placeholder, width, onChange, name, value, err, helperText, type, style, bg, color, placecolor, className }) => {
+const SoTextArea = ({ placeholder, width, height, onChange, name, value, err, helperText, type, style, bg, color, placecolor }) => {
   return (
     <span style={{width:"100%"}}>
       <StyledInput
         placeholder={placeholder}
         width={width}
+        height={height}
         onChange={onChange}
         name={name}
         value={value}
@@ -69,7 +70,6 @@ const SoInput = ({ placeholder, width, onChange, name, value, err, helperText, t
         style={style}
         bg={bg}
         color={color}
-        className={className}
         placecolor={placecolor}
       />
       {err && helperText && <HelperText err={err}>{helperText}</HelperText>}
@@ -77,4 +77,4 @@ const SoInput = ({ placeholder, width, onChange, name, value, err, helperText, t
   );
 };
 
-export default SoInput;
+export default SoTextArea;

@@ -10,9 +10,9 @@ import {
   SoTypography,
 } from "../../../components/styledcomponents/globalStyles";
 import { useThemeContext } from "../../../context/theme/ThemeContext";
-import { articleData } from "../../../datas/ArticleData";
+import { articleDataList } from "../../../datas/ArticleData";
 
-const MasonryLayout = () => {
+const MasonryLayout = ({articleData}) => {
   const { palette } = useThemeContext();
 
   return (
@@ -21,10 +21,11 @@ const MasonryLayout = () => {
         columnsCountBreakPoints={{ 300: 2, 500: 3, 700: 4, 900: 5 }}
       >
         <Masonry columnsCount={3} gutter="20px">
-        {articleData.map((data, index) => {
+        {articleDataList.map((data, index) => {
             return <SoFlex key={index} dir='column'>
               <SoBox className="relative">
-                <SoImg width="100%" src={`/assets/${data.img}`} />
+                {/* <SoImg width="100%" src={`http://localhost:5000/${data.imgPath}`} /> */}
+                <SoImg width="100%" src={`assets/${data.img}`} />
                 <SoSubTitle tt='uppercase' className='absolute bottom-0 right-0' style={{background:"linear-gradient(360deg, black, transparent)"}} color={palette.text.title}>{data.title}</SoSubTitle>
               </SoBox>
               <SoBox w='100%'>

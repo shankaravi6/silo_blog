@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
     NavText,
   SoBox,
@@ -15,8 +15,19 @@ import SoInput from "../../components/common/SoInput";
 import SoButton from "../../components/common/SoButton";
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import ControlCameraOutlinedIcon from '@mui/icons-material/ControlCameraOutlined';
+import {useNavigate} from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { setMode } from "../../store";
 
 const AdminLogin = () => {
+
+  const dispatch = useDispatch();
+
+  useMemo(() => {
+    dispatch(setMode("dark"));
+  },[]);
+
+  const navigate = useNavigate();
   const shadow = `inset 0 0 0.5px 1px hsla(0, 0%,  
         100%, 0.075),
         0 0 0 1px hsla(0, 0%, 0%, 0.05),
@@ -25,7 +36,7 @@ const AdminLogin = () => {
         0 3.5px 6px hsla(0, 0%, 0%, 0.09)`;
 
   return (
-    <SoCenterContainer bg={colorTokens.drops[900]}>
+    <SoCenterContainer bg="#000000db">
       <SoFlex bs={shadow} bg={colorTokens.drops[1000]}>
         <SoBox className="relative" w="500px" h="500px">
           <SoImg style={{transform:'rotateY(180deg)'}} width="100%" src={CoverImg} />
@@ -44,18 +55,12 @@ const AdminLogin = () => {
             </SoFlex>
             <SoFlex p='0px 50px' dir="column" bg="transparent" w="100%" gap="1.5rem">
               <SoInput
-                bg="transparent"
-                placecolor={colorTokens.drops[500]}
-                color={colorTokens.drops[200]}
                 placeholder="User Id"
               />
               <SoInput
-                bg="transparent"
-                placecolor={colorTokens.drops[500]}
-                color={colorTokens.drops[200]}
                 placeholder="Password"
               />
-              <SoButton width="100%">Submit</SoButton>
+              <SoButton onClick={() => navigate('dashboard')}  width="100%">LOGIN</SoButton>
             </SoFlex>
           </SoFlex>
         </SoBox>

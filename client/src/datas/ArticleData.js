@@ -1,4 +1,4 @@
-export const articleData = [
+export const articleDataList = [
     {
         id: 1,
         title: "Titan",

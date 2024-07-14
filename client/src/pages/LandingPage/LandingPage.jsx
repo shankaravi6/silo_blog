@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   SoCenterContainer,
   SoContainer,
@@ -12,8 +12,17 @@ import BannerSection from "./Banner/BannerSection";
 import InfoSection from "./Info/InfoSection";
 import ArticleSection from "./Article/ArticleSection";
 import FooterBar from "../../components/layout/Footer/FooterBar";
+import { useDispatch } from "react-redux";
+import { setMode } from "../../store";
 
 const LandingPage = () => {
+
+  const dispatch = useDispatch();
+
+  useMemo(() => {
+    dispatch(setMode("light"));
+  },[]);
+
   return (
     <SoContainer>
       <NavBar />
