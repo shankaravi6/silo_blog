@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  mode: "light"
+  mode: "light",
+  adminLogin : false
 };
 
 export const modeSlice = createSlice({
@@ -11,8 +12,11 @@ export const modeSlice = createSlice({
     setMode: (state,action) => {
       state.mode = action.payload;
     },
+    setAdminLogin: (state,action) => {
+      state.adminLogin = action.payload;
+    }
   },
 });
 
-export const { setMode } = modeSlice.actions;
+export const { setMode, setAdminLogin } = modeSlice.actions;
 export default modeSlice.reducer;

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import {
   SoBox,
   SoContainer,
@@ -6,9 +6,9 @@ import {
   SoFlex,
   SoSection,
 } from "../../components/styledcomponents/globalStyles";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { colorTokens } from "../../context/theme/theme";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setMode } from "../../store";
 import SideBar from "../../components/layout/SideBar/SideBar";
 import AdminRoutes from "../../routes/AdminRoutes";
