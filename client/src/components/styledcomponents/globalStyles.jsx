@@ -93,6 +93,7 @@ export const SoFlex = SiloComponent(styled.div`
     padding: ${(props) => (props.sp ? props.sp : "none")};
     align-items: ${(props) => (props.sal ? props.sal : "center")};
     justify-content: ${(props) => (props.sjc ? props.sjc : "center")};
+    width: ${(props) => (props.sw ? props.sw : "unset")};
   }
 `);
 
@@ -164,17 +165,17 @@ export const SoForm = styled.form`
 
 export const SoTitle = SiloComponent(styled.h1`
   font-family: FrontPage;
-  font-size: ${(props) => (props.fs ? props.fs : "15rem")};
+  font-size: ${(props) => (props.fs ? props.fs : "clamp(2rem, 10vw, 15rem)")};
   text-align: center;
-  letter-spacing: ${(props) => (props.ls ? props.ls : "1.5px")};
+  letter-spacing: ${(props) => (props.ls ? props.ls : "clamp(1rem, 5vw, 2rem)")};
   color: ${(props) => props.color ? props.color : props.palette.text.main};
   text-transform: ${(props) => props.tt ? props.tt : "unset"};
   margin: unset;
 
   @media screen and (max-width: 960px) {
-    letter-spacing: 30px;
+    /* letter-spacing: 30px; */
     text-align: center;
-    margin-left: 30px;
+    margin-left: ${(props) => props.s_ml ? props.s_ml : "30px"};
   }
 
   /* &::before {

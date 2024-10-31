@@ -74,14 +74,14 @@ const ArticleSection = () => {
   };
 
   return (
-    <SoSection>
+    <SoSection sp='10px'>
       <SoCover m="100px 0 0 0">
         <SoFlex>
           <SoFlex>
             <SoSubTitle tt="uppercase">Weekly Articles</SoSubTitle>
           </SoFlex>
         </SoFlex>
-        <SoBox display="block">
+        <SoBox sdisplay="block" display="block">
           <InfiniteScroll
             dataLength={articleData.length}
             next={fetchMoreArticles}

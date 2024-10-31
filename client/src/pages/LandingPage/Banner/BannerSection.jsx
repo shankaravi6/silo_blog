@@ -14,7 +14,7 @@ const BannerSection = () => {
   
 
   return (
-      <SoSection>
+      <SoSection sp='10px'>
         <SoFlex gap="2.5rem">
           <BannerContent/>
           <BannerImage/>

@@ -12,17 +12,17 @@ const BannerImage = () => {
   const { palette } = useThemeContext();
 
   return (
-    <SoBox className="relative" m="-200px 0 0 0">
+    <SoBox className="relative" m="0px 0 0 0">
       <SoFlex dir="column" gap="5px">
         <SoTypography
           color={palette.text.mid}
-          className="absolute -bottom-0"
+          className="absolute -bottom-10"
           fs="18px"
         >
           John Hinston
         </SoTypography>
         <SoBox w="325px">
-          <SoImg src={Hinston} width="100%" className="absolute"></SoImg>
+          <SoImg src={Hinston} width="100%" className=""></SoImg>
         </SoBox>
       </SoFlex>
     </SoBox>

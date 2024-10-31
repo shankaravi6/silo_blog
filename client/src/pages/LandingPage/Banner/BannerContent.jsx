@@ -13,12 +13,12 @@ const BannerContent = () => {
     <SoBox>
       <SoFlex al="flex-start" dir="column">
         <SoTitle>SATELLITE*</SoTitle>
-        <SoFlex m="-55px 0 0 0" jc="space-between" w="100%">
+        <SoFlex m="5px 0 0 0" sm_dir="row" jc="space-between" w="100%">
           <SoTypography>07</SoTypography>
           <SoTypography>JULY</SoTypography>
           <SoTypography>2024</SoTypography>
         </SoFlex>
-        <SoHeadLineText fs="25px">
+        <SoHeadLineText fs="clamp(.25rem, 5vw, 1.5rem)">
           Lorem ipsum dolor sit amet consectetur adipiscing elit, nisl semper
           vestibulum facilisi eu primis, velit dictum dis nam convallis
           praesent. Lorem ipsum dolor sit amet consectetur adipiscing elit, nisl
