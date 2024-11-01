@@ -54,6 +54,10 @@ export const SoSection = SiloComponent(styled.section`
     padding: ${(props) => (props.sp ? props.sp : "unset")};
     height: ${(props) => (props.sh ? props.sh : "unset")};
   }
+  @media screen and (max-width: 1125px) {
+    width: ${(props) => (props.mw ? props.mw : "none")};
+    padding: ${(props) => (props.mp ? props.mp : "unset")};
+  }
 `);
 
 export const SoCover = SiloComponent(styled.div`
@@ -94,6 +98,7 @@ export const SoFlex = SiloComponent(styled.div`
     align-items: ${(props) => (props.sal ? props.sal : "center")};
     justify-content: ${(props) => (props.sjc ? props.sjc : "center")};
     width: ${(props) => (props.sw ? props.sw : "unset")};
+    height: ${(props) => (props.sh ? props.sh : "unset")};
   }
 `);
 

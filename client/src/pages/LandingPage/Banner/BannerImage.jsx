@@ -21,7 +21,7 @@ const BannerImage = () => {
         >
           John Hinston
         </SoTypography>
-        <SoBox w="325px">
+        <SoBox sw='unset' mw='unset' w="325px">
           <SoImg src={Hinston} width="100%" className=""></SoImg>
         </SoBox>
       </SoFlex>

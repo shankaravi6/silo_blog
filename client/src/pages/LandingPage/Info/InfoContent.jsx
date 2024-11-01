@@ -21,12 +21,12 @@ const InfoContent = () => {
     <SoBox w="100%">
       <SoFlex w="100%" h='100vh' jc="center" gap='20px' dir='column'>
         <SoFlex dir='column' al='flex-end'>
-          <SoSubTitle ta='left' fs="58px">ELIZABET WAREEN'S PLAN</SoSubTitle>
-          <SoHeadLineText fs="48px">from</SoHeadLineText>
-          <SoSubTitle fs="44px">UK PASSIONATE</SoSubTitle>
+          <SoSubTitle ta='left' fs="clamp(1.5rem,5vw,4rem)">ELIZABET WAREEN'S PLAN</SoSubTitle>
+          <SoHeadLineText fs="clamp(1.25rem,5vw,3.8rem)">from</SoHeadLineText>
+          <SoSubTitle fs="clamp(1.15rem,5vw,3.7rem)">UK PASSIONATE</SoSubTitle>
         </SoFlex>
         <SoBox>
-            <SoTypography fs='22px' ls='0px' color={palette.text.low}>
+            <SoTypography fs="clamp(.25rem, 5vw, 1.5rem)" ls='0px' color={palette.text.low}>
             Lorem ipsum dolor sit amet consectetur adipiscing elit, non vitae nunc congue erat in, pharetra facilisis ridiculus porta augue nam.
             </SoTypography>
         </SoBox>
